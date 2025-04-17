@@ -52,27 +52,26 @@
       <a-entity gltf-model="models/Doorway.glb" position="0 0 -5.05" scale="0.5 0.5 0.5"></a-entity>
 
       <!-- Model: Painting Canvas -->
-      <a-entity gltf-model="models/Painting Canvas.glb" position="2 1.5 -4.9" scale="0.3 0.3 0.3" rotation="0 0 0"></a-entity>
+      <a-entity gltf-model="models/Painting Canvas.glb" position="2 1.5 -4.9" scale="0.3 0.3 0.3"
+                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000; easing: linear">
+      </a-entity>
 
       <!-- Model: Matchbox -->
-      <a-entity gltf-model="models/matchbox open.glb" position="1 0.5 -1" scale="0.3 0.3 0.3"></a-entity>
+      <a-entity gltf-model="models/matchbox open.glb" position="1 0.5 -1" scale="0.3 0.3 0.3"
+                animation="property: position; dir: alternate; dur: 2000; loop: true; to: 1 0.7 -1">
+      </a-entity>
 
       <!-- Model: Paint Kit -->
       <a-entity gltf-model="models/paint kit mini.glb" position="-1 0.5 -1" scale="0.3 0.3 0.3"></a-entity>
 
+      <!-- Model: Robot kecil berjalan -->
+      <a-entity gltf-model="https://cdn.aframe.io/test-models/models/robot/robot.gltf"
+                position="-4 0 -2" scale="0.5 0.5 0.5"
+                animation="property: position; to: 4 0 -2; dir: alternate; dur: 5000; loop: true; easing: linear">
+      </a-entity>
+
       <!-- Audio -->
       <a-entity id="music" sound="src: audio/no-copyright-music-happy-306601.mp3; loop: true; autoplay: false; volume: 0.5" position="0 2 0"></a-entity>
-
-      <!-- Animasi: Painting berputar -->
-      <a-animation attribute="rotation" dur="5000" to="0 360 0" repeat="indefinite" easing="linear"
-                    begin="true" direction="normal"
-                    target="models/Painting Canvas.glb">
-      </a-animation>
-
-      <!-- Animasi: Matchbox naik turun -->
-      <a-animation attribute="position" dur="2000" direction="alternate" repeat="indefinite"
-                    from="1 0.5 -1" to="1 0.7 -1">
-      </a-animation>
 
       <!-- Kamera -->
       <a-entity camera look-controls wasd-controls position="0 1.6 5"></a-entity>
