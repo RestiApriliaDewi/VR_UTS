@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>VR Kelas</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Lantai -->
+      <a-plane position="0 0 0" rotation="-90 0 0" width="10" height="10" color="#7BC8A4"></a-plane>
+      
+      <!-- Dinding -->
+      <a-box position="0 2 -5" width="10" height="4" depth="0.1" color="#D3D3D3"></a-box>
+      <a-box position="5 2 0" width="0.1" height="4" depth="10" color="#D3D3D3"></a-box>
+      <a-box position="-5 2 0" width="0.1" height="4" depth="10" color="#D3D3D3"></a-box>
+
+      <!-- Meja dan Kursi -->
+      <a-box position="-2 0.5 -2" width="2" height="0.1" depth="1" color="#8B4513"></a-box>
+      <a-box position="2 0.5 -2" width="2" height="0.1" depth="1" color="#8B4513"></a-box>
+      <a-box position="-2 0.5 -4" width="2" height="0.1" depth="1" color="#8B4513"></a-box>
+      <a-box position="2 0.5 -4" width="2" height="0.1" depth="1" color="#8B4513"></a-box>
+
+      <!-- Kursi -->
+      <a-box position="-2.5 0.25 -2.5" width="0.5" height="0.5" depth="0.5" color="#654321"></a-box>
+      <a-box position="-1.5 0.25 -2.5" width="0.5" height="0.5" depth="0.5" color="#654321"></a-box>
+      <a-box position="1.5 0.25 -2.5" width="0.5" height="0.5" depth="0.5" color="#654321"></a-box>
+      <a-box position="2.5 0.25 -2.5" width="0.5" height="0.5" depth="0.5" color="#654321"></a-box>
+      <a-box position="-2.5 0.25 -4.5" width="0.5" height="0.5" depth="0.5" color="#654321"></a-box>
+      <a-box position="-1.5 0.25 -4.5" width="0.5" height="0.5" depth="0.5" color="#654321"></a-box>
+      <a-box position="1.5 0.25 -4.5" width="0.5" height="0.5" depth="0.5" color="#654321"></a-box>
+      <a-box position="2.5 0.25 -4.5" width="0.5" height="0.5" depth="0.5" color="#654321"></a-box>
+
+      <!-- Papan Tulis -->
+      <a-box position="0 2 -4.8" width="3" height="1.5" depth="0.1" color="#000"></a-box>
+
+      <!-- Model Tambahan -->
+
+      <!-- Pintu -->
+      <a-entity gltf-model="models/Doorway.glb" position="-4.8 0 -4.8" scale="0.2 0.2 0.2"></a-entity>
+
+      <!-- Sofa -->
+      <a-entity gltf-model="models/Couch Small.glb" position="0 0 -1" scale="0.2 0.2 0.2"></a-entity>
+
+      <!-- Lukisan -->
+      <a-entity gltf-model="models/Painting Canvas.glb" position="3 1.6 -4.9" scale="0.15 0.15 0.15"></a-entity>
+
+      <!-- Kotak korek dengan animasi naik-turun -->
+      <a-entity gltf-model="models/matchbox open.glb" position="-3 0.05 -1.5" scale="0.05 0.05 0.05"
+                animation="property: position; dir: alternate; dur: 2000; loop: true; to: -3 0.2 -1.5">
+      </a-entity>
+
+      <!-- Alat lukis dengan animasi rotasi -->
+      <a-entity gltf-model="models/paint kit mini.glb" position="3 0.05 -1.5" scale="0.05 0.05 0.05"
+                animation="property: rotation; to: 0 360 0; loop: true; dur: 4000; easing: linear">
+      </a-entity>
+
+      <!-- Musik -->
+      <a-sound src="audio/no-copyright-music-happy-306601.mp3" autoplay="true" loop="true" position="0 2 0"></a-sound>
+
+      <!-- Cahaya -->
+      <a-light type="ambient" color="#BBB"></a-light>
+
+      <!-- Kamera -->
+      <a-entity camera look-controls wasd-controls position="0 1.6 5"></a-entity>
+    </a-scene>
+  </body>
+</html>
